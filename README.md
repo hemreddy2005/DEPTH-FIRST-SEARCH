@@ -1,7 +1,7 @@
 # BREADTH-FIRST-SEARCH
 <h1>ExpNo 3 : Implement Breadth First Search Traversal of a Graph</h1> 
-<h3>Name:  </h3>
-<h3>Register Number: </h3>
+<h3>Name:  Hemanth Kumar R</h3>
+<h3>Register Number: 212223040065</h3>
 <H3>Aim:</H3>
 <p>To Implement Breadth First Search Traversal of a Graph using Python 3.</p>
 <h3>Theory:</h3>
@@ -103,8 +103,44 @@ G F <BR>
 <hr>
 ['0', '1', '2', '3', '4']
 <hr>
+
+<h3>Code:</h3>
+
+```python
+from collections import deque
+v, e = map(int, input().split())
+graph = {}
+for _ in range(e):
+    u, w = input().split()
+    if u not in graph:
+        graph[u] = []
+    if w not in graph:
+        graph[w] = []
+    graph[u].append(w)
+    graph[w].append(u)   # Remove this line for directed graph
+for node in graph:
+    graph[node].sort()
+visited = set()
+queue = deque()
+result = []
+start = list(graph.keys())[0]
+visited.add(start)
+queue.append(start)
+while queue:
+    node = queue.popleft()
+    result.append(node)
+    for neighbor in graph[node]:
+        if neighbor not in visited:
+            visited.add(neighbor)
+            queue.append(neighbor)
+print(result)
+```
 <h3>Result:</h3>
-<hr>
+
+<img width="310" height="197" alt="image" src="https://github.com/user-attachments/assets/d94619b2-ea71-4a81-a621-898e643cfad3" />
+
+<img width="273" height="151" alt="image" src="https://github.com/user-attachments/assets/a5436f6d-2e20-42e5-9334-8149c7bb26f4" />
+
 <p>Thus,a Graph was constructed and implementation of Breadth First Search for the same graph was done successfully.</p>
 
 
