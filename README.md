@@ -135,11 +135,14 @@ while queue:
             queue.append(neighbor)
 print(result)
 ```
-<h3>Result:</h3>
+
+<h3>Output:</h3>
 
 <img width="310" height="197" alt="image" src="https://github.com/user-attachments/assets/d94619b2-ea71-4a81-a621-898e643cfad3" />
 
 <img width="273" height="151" alt="image" src="https://github.com/user-attachments/assets/a5436f6d-2e20-42e5-9334-8149c7bb26f4" />
+
+<h3>Result:</h3>
 
 <p>Thus,a Graph was constructed and implementation of Breadth First Search for the same graph was done successfully.</p>
 
